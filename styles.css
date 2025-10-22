@@ -1,0 +1,155 @@
+/* ---------- Variables ---------- */
+:root{
+  --bg: #f6f9fb;
+  --panel: #ffffff;
+  --text: #06121a;
+  --muted: #556a72;
+  --accent: #e11d48;    /* red */
+  --accent-2: #0057b7;  /* blue */
+  --card-radius: 14px;
+  --shadow: 0 14px 36px rgba(8,20,30,0.08);
+  --soft-shadow: 0 8px 26px rgba(8,20,30,0.06);
+  --maxw: 1200px;
+  --transition: 360ms cubic-bezier(.2,.9,.3,1);
+}
+
+/* ---------- Global ---------- */
+*{box-sizing:border-box}
+html{font-family:Inter, "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; -webkit-font-smoothing:antialiased;}
+body{margin:0;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:inherit}
+.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 18px}
+
+
+/* ---------- Navbar ---------- */
+.navbar{position:sticky;top:0;background:var(--panel);box-shadow:var(--soft-shadow);z-index:120}
+.nav-inner{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 18px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;cursor:pointer}
+.logo{font-size:1.5rem}
+.nav-tabs{display:flex;gap:8px;align-items:center}
+.tab-link{padding:8px 12px;border-radius:10px;cursor:pointer;transition:all var(--transition);color:var(--muted);font-weight:600}
+.tab-link:hover{transform:translateY(-3px);color:var(--accent-2)}
+.nav-controls{display:flex;align-items:center;gap:10px}
+.theme-toggle{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:10px;cursor:pointer;background:color-mix(in srgb,var(--accent) 6%, transparent)}
+.theme-toggle .moon{opacity:0}
+#theme-toggle:checked ~ * .theme-toggle .sun{opacity:0}
+#theme-toggle:checked ~ * .theme-toggle .moon{opacity:1;transform:none}
+
+/* ---------- Panels (tabs) ---------- */
+.panel{display:none;opacity:0;transform:translateY(8px);transition:all 420ms ease;max-width:var(--maxw);margin:22px auto;padding:18px}
+#tab-home:checked ~ * .panel-home,
+#tab-menu:checked ~ * .panel-menu,
+#tab-order:checked ~ * .panel-order,
+#tab-gallery:checked ~ * .panel-gallery,
+#tab-shopping:checked ~ * .panel-shopping,
+#tab-about:checked ~ * .panel-about{
+  display:block;opacity:1;transform:none;
+}
+
+/* ---------- Hero / Home ---------- */
+.hero{display:flex;gap:24px;align-items:stretch;background:linear-gradient(180deg,color-mix(in srgb,var(--accent) 28%, #fff), transparent);padding:28px;border-radius:16px;box-shadow:var(--soft-shadow)}
+.hero-left{flex:1;min-width:260px}
+.hero-right{width:360px}
+.lead{color:var(--muted);margin:8px 0 0;font-size:1.05rem}
+.cta{display:flex;gap:12px;margin-top:18px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:12px;font-weight:700;cursor:pointer;transition:all var(--transition);background:var(--panel);border:1px solid transparent}
+.btn.primary{background:var(--accent);color:#fff;box-shadow:0 10px 28px rgba(225,29,72,0.14)}
+.btn.primary:hover{transform:translateY(-3px)}
+.btn.ghost{background:transparent;border:1px solid color-mix(in srgb,var(--accent) 8%, transparent);color:var(--accent-2)}
+
+/* quick filters */
+.quick-filters{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.filter-label{font-weight:700;color:var(--muted)}
+.filter-chip{padding:8px 12px;border-radius:999px;background:color-mix(in srgb,var(--panel) 88%, transparent);cursor:pointer;border:1px solid color-mix(in srgb,var(--accent) 6%, transparent);font-weight:600}
+
+/* feature card */
+.feature-card{display:flex;gap:12px;padding:12px;background:var(--panel);border-radius:12px;box-shadow:var(--soft-shadow);align-items:center}
+.feature-card .imgwrap{width:110px;height:84px;overflow:hidden;border-radius:10px}
+.feature-card .imgwrap img{width:100%;height:100%;object-fit:cover}
+.feature-meta h3{margin:0;font-size:1.05rem}
+.feature-actions{margin-top:10px;display:flex;gap:8px}
+
+/* showcase lists */
+.showcase{display:flex;gap:12px;margin-top:18px}
+.show-column{flex:1;background:linear-gradient(180deg,color-mix(in srgb,var(--panel) 96%, transparent), color-mix(in srgb,var(--accent) 3%, transparent));padding:12px;border-radius:12px;box-shadow:var(--soft-shadow)}
+.show-column h4{margin:0 0 8px 0}
+.mini-list{list-style:none;padding:0;margin:0}
+.mini-list li{padding:6px 0}
+
+/* home gallery preview */
+.home-gallery{display:flex;gap:8px;margin-top:18px}
+.gallery-thumb{display:block;width:100%;max-width:180px;border-radius:12px;overflow:hidden;cursor:pointer}
+.gallery-thumb img{width:100%;height:110px;object-fit:cover;display:block}
+
+/* ---------- Menu area ---------- */
+.menu-filters{display:flex;gap:10px;margin:14px 0}
+.menu-filters .chip{padding:10px 14px;border-radius:999px;background:color-mix(in srgb,var(--panel) 94%, transparent);cursor:pointer;font-weight:700;border:1px solid color-mix(in srgb,var(--accent) 6%, transparent)}
+.menu-area{display:flex;gap:18px;align-items:flex-start}
+.menu-grid{flex:1;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+
+/* card flip */
+.menu-card{perspective:1200px;cursor:pointer}
+.card-scene{position:relative;height:360px;transform-style:preserve-3d;transition:transform 520ms var(--transition);border-radius:var(--card-radius)}
+.menu-card:hover .card-scene,.menu-card:focus-within .card-scene{transform:rotateY(180deg)}
+.card-face{position:absolute;inset:0;border-radius:var(--card-radius);overflow:hidden;backface-visibility:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;background:var(--panel)}
+.card-face.front{transform:rotateY(0)}
+.card-face.back{transform:rotateY(180deg);padding:14px}
+.imgwrap{height:180px;overflow:hidden}
+.imgwrap img{width:100%;height:100%;object-fit:cover;display:block}
+.card-meta{padding:14px}
+.card-meta h3{margin:0 0 6px 0}
+.muted{color:var(--muted)}
+
+/* nutrition bars */
+.nutri{margin-top:8px;display:flex;flex-direction:column;gap:8px;font-size:0.9rem}
+.bar{width:100%;background: color-mix(in srgb,var(--accent) 10%, transparent);border-radius:8px;height:10px;overflow:hidden}
+.bar span{display:block;height:100%;width:var(--val);background:var(--accent-2);transition:width 420ms ease}
+
+/* card actions */
+.card-actions{display:flex;gap:8px;align-items:center;margin-top:10px;flex-wrap:wrap}
+.add-label input{margin-right:8px}
+
+/* ---------- Filters logic (CSS) ----------
+   Show / hide cards depending on the menu-filter radios.
+   Note: the radios are before the content so we can reference them via general sibling selectors (~).
+*/
+#filter-all:checked ~ * .menu-area .menu-grid .menu-card{opacity:1;transform:none;pointer-events:auto;filter:none}
+#filter-pizzas:checked ~ * .menu-area .menu-grid .menu-card:not(.pizzas){opacity:0.08;transform:scale(.96);filter:grayscale(.6);pointer-events:none}
+#filter-sides:checked ~ * .menu-area .menu-grid .menu-card:not(.sides){opacity:0.08;transform:scale(.96);filter:grayscale(.6);pointer-events:none}
+#filter-desserts:checked ~ * .menu-area .menu-grid .menu-card:not(.desserts){opacity:0.08;transform:scale(.96);filter:grayscale(.6);pointer-events:none}
+#filter-drinks:checked ~ * .menu-area .menu-grid .menu-card:not(.drinks){opacity:0.08;transform:scale(.96);filter:grayscale(.6);pointer-events:none}
+
+/* ---------- CART ASIDE ---------- */
+.cart{width:320px;background:var(--panel);border-radius:12px;padding:14px;box-shadow:var(--soft-shadow);align-self:start;position:sticky;top:86px;height:fit-content}
+.cart h3{margin:0 0 10px 0}
+.cart-items{display:flex;flex-direction:column;gap:8px;min-height:120px}
+
+/* cart item entries are hidden by default and shown when the corresponding product input is checked */
+.cart-item{display:none;padding:8px;border-radius:8px;background:color-mix(in srgb,var(--accent-2) 6%, var(--panel));color:var(--text);font-weight:700;justify-content:space-between;display:flex;align-items:center}
+.cart-item .qty{opacity:.85;font-size:.95rem;margin-left:8px}
+
+/* selectors that reveal cart items when product toggles are checked (inputs are defined at top) */
+#p-margherita:checked ~ .maincontent .panel-menu .cart .item-margherita{display:flex}
+#p-pepperoni:checked ~ .maincontent .panel-menu .cart .item-pepperoni{display:flex}
+#p-bbq:checked ~ .maincontent .panel-menu .cart .item-bbq{display:flex}
+#p-veggie:checked ~ .maincontent .panel-menu .cart .item-veggie{display:flex}
+#p-cheeseburst:checked ~ .maincontent .panel-menu .cart .item-cheeseburst{display:flex}
+#p-paneer:checked ~ .maincontent .panel-menu .cart .item-paneer{display:flex}
+#p-dominator:checked ~ .maincontent .panel-menu .cart .item-dominator{display:flex}
+
+#p-garlic:checked ~ .maincontent .panel-menu .cart .item-garlic{display:flex}
+#p-stuffed:checked ~ .maincontent .panel-menu .cart .item-stuffed{display:flex}
+#p-wedges:checked ~ .maincontent .panel-menu .cart .item-wedges{display:flex}
+
+#p-lava:checked ~ .maincontent .panel-menu .cart .item-lava{display:flex}
+#p-brownie:checked ~ .maincontent .panel-menu .cart .item-brownie{display:flex}
+#p-cheesecake:checked ~ .maincontent .panel-menu .cart .item-cheesecake{display:flex}
+
+#p-coke:checked ~ .maincontent .panel-menu .cart .item-coke{display:flex}
+#p-coffee:checked ~ .maincontent .panel-menu .cart .item-coffee{display:flex}
+#p-smoothie:checked ~ .maincontent .panel-menu .cart .item-smoothie{display:flex}
+
+/* show a hint when no items are present */
+.cart-empty{margin-top:12px;color:var(--muted);font-size:.95rem}
+.cart-actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
