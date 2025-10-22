@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DominoDev — Interactive Domino's Recipe Microsite</title>
+  <meta name="description" content="Interactive Domino's style recipe microsite — CSS only, Domino's colors.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Tabs -->
+  <input type="radio" name="tab" id="tab-home" checked class="visually-hidden">
+  <input type="radio" name="tab" id="tab-menu" class="visually-hidden">
+  <input type="radio" name="tab" id="tab-order" class="visually-hidden">
+  <input type="radio" name="tab" id="tab-gallery" class="visually-hidden">
+  <input type="radio" name="tab" id="tab-shopping" class="visually-hidden">
+  <input type="radio" name="tab" id="tab-about" class="visually-hidden">
+
+
+  <!-- Menu filters (hidden radios used to filter) -->
+  <input type="radio" name="menu-filter" id="filter-all" value="all" checked class="visually-hidden">
+  <input type="radio" name="menu-filter" id="filter-pizzas" value="pizzas" class="visually-hidden">
+  <input type="radio" name="menu-filter" id="filter-sides" value="sides" class="visually-hidden">
+  <input type="radio" name="menu-filter" id="filter-desserts" value="desserts" class="visually-hidden">
+  <input type="radio" name="menu-filter" id="filter-drinks" value="drinks" class="visually-hidden">
+  
+<!-- Add this with your other hidden inputs -->
+<input type="checkbox" id="shopping-order-confirm" class="visually-hidden">
+<input type="checkbox" id="shopping-order-reset" class="visually-hidden">
+
+  <!-- Product toggles for cart (one per product) -->
+  <div class="product-toggles">
+    <input type="checkbox" id="p-margherita" class="prod-checkbox visually-hidden">
+    <input type="checkbox" id="p-pepperoni" class="prod-checkbox visually-hidden">
+    <input type="checkbox" id="p-bbq" class="prod-checkbox visually-hidden">
+    <input type="checkbox" id="p-veggie" class="prod-checkbox visually-hidden">
+    <input type="checkbox" id="p-cheeseburst" class="prod-checkbox visually-hidden">
+    <input type="checkbox" id="p-paneer" class="prod-checkbox visually-hidden">
+    <input type="checkbox" id="p-dominator" class="prod-checkbox visually-hidden">
+
+    <input type="checkbox" id="p-garlic" class="prod-checkbox visually-hidden">
+    <input type="checkbox" id="p-stuffed" class="prod-checkbox visually-hidden">
+    <input type="checkbox" id="p-wedges" class="prod-checkbox visually-hidden">
+
+    <input type="checkbox" id="p-lava" class="prod-checkbox visually-hidden">
+    <input type="checkbox" id="p-brownie" class="prod-checkbox visually-hidden">
+    <input type="checkbox" id="p-cheesecake" class="prod-checkbox visually-hidden">
+
+    <input type="checkbox" id="p-coke" class="prod-checkbox visually-hidden">
+    <input type="checkbox" id="p-coffee" class="prod-checkbox visually-hidden">
+    <input type="checkbox" id="p-smoothie" class="prod-checkbox visually-hidden">
+  </div>
+
+  <!-- Order-confirm -->
+  <input type="checkbox" id="order-confirm" class="visually-hidden" aria-hidden="true">
+
+  <header class="navbar" role="banner">
+    <div class="nav-inner">
+      <!-- DominoDev clickable label -> home tab -->
+      <label for="tab-home" class="brand" title="DominoDev — Home">
+        <span class="logo" aria-hidden="true">🍕</span>
+        <span class="brand-name">DominoDev</span>
+      </label>
+
+      <nav class="nav-tabs" role="navigation" aria-label="Primary">
+        <label for="tab-home" class="tab-link" tabindex="0">Home</label>
+        <label for="tab-menu" class="tab-link" tabindex="0">Menu</label>
+        <label for="tab-order" class="tab-link" tabindex="0">Order</label>
+        <label for="tab-gallery" class="tab-link" tabindex="0">Gallery</label>
+        <label for="tab-shopping" class="tab-link" tabindex="0">Shopping</label>
+        <label for="tab-about" class="tab-link" tabindex="0">About</label>
+      </nav>
+
+
+    </div>
+  </header>
+
+  <main id="main" class="maincontent">
+
+    <!-- HOME PANEL -->
+    <section class="panel panel-home" aria-labelledby="home-title">
+      <div class="hero">
+        <div class="hero-left">
+          <h1 id="home-title">Interactive Domino's Recipe Microsite</h1>
+          <p class="lead">Explore, customize, and recreate Domino's-style recipes. </p>
+
+          <div class="cta">
+            <label for="tab-menu" class="btn primary">Explore Menu</label>
+            <label for="tab-order" class="btn ghost">Order Online</label>
+          </div>
+        </div>
+
+    </section>
+
+   
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <p>Group Project-1 — CSC 4370/6370 (Web Programming) — Fall 2025</p>
+      <p>Team: Rajeev Vas Veeragandham (Leader) and Gowtham Revanur</p>
+      <p>Instructor: Dr. Henry Louis</p>
+      <p>© 2025 Team DominoDev</p>
+    </div>
+  </footer>
+
+</body>
+</html>
