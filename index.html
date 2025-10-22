@@ -602,7 +602,42 @@
             <label class="order-item"><input type="checkbox"> Coke (500ml)</label>
           </div>
         </div>
-            
+
+        <form class="order-form" onsubmit="return false;" aria-label="Order form">
+          <label>
+            Full name
+            <input type="text" name="name" placeholder="Your name" required>
+          </label>
+
+          <label>
+            Contact (phone/email)
+            <input type="text" name="contact" placeholder="Phone or email" required>
+          </label>
+
+          <label class="full">
+            Delivery address
+            <input type="text" name="address" placeholder="Street, city, zip" required>
+          </label>
+
+          <label class="full">
+            Notes
+            <textarea name="notes" rows="2" placeholder="Extra instructions (optional)"></textarea>
+          </label>
+
+          <div class="form-actions">
+            <!-- This label toggles #order-confirm which reveals thank-you message -->
+            <label for="order-confirm" class="btn primary submit-order">Place Order</label>
+            <label for="tab-menu" class="btn ghost">Back to Menu</label>
+          </div>
+
+          <!-- Only show success message when order is confirmed -->
+          <div class="order-success" aria-live="polite">
+            <p>🎉 Thank you! Your order has been placed. 🎉</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
     
     
 
