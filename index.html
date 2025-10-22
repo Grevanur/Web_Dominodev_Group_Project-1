@@ -655,7 +655,42 @@
         </div>
       </div>
     </section>
+ <!-- SHOPPING PANEL -->
+<section class="panel panel-shopping" aria-labelledby="shopping-title">
+  <div class="panel-inner">
+    <h2 id="shopping-title">Shopping List</h2>
+    <p class="muted">Auto-generate & edit shopping list — check items as you buy them.</p>
 
+    <ul class="shopping-list">
+      <li><label><input type="checkbox"> Pizza dough (500 g)</label></li>
+      <li><label><input type="checkbox"> Tomato sauce (jar)</label></li>
+      <li><label><input type="checkbox"> Fresh mozzarella (200 g)</label></li>
+      <li><label><input type="checkbox"> Fresh basil</label></li>
+      <li><label><input type="checkbox"> Olive oil</label></li>
+      <li><label><input type="checkbox"> Garlic cloves</label></li>
+      <li><label><input type="checkbox"> Bell peppers</label></li>
+      <li><label><input type="checkbox"> Paneer cubes</label></li>
+      <li><label><input type="checkbox"> Mushrooms</label></li>
+      <li><label><input type="checkbox"> Onions</label></li>
+    </ul>
+
+    <div class="shopping-actions">
+      <label for="shopping-order-confirm" class="btn primary">Place Grocery Order</label>
+      <label for="tab-menu" class="btn ghost">Back to Menu</label>
+    </div>
+
+    <!-- Shopping Order Success Message -->
+    <div class="order-success shopping-success" aria-live="polite">
+      <p>🎉 Grocery Order Placed Successfully! 🎉</p>
+      <p>Your grocery items will be delivered within 2 hours.</p>
+      <p>You'll receive a confirmation with delivery tracking.</p>
+      <div class="success-actions">
+        <label for="shopping-order-reset" class="btn primary">Place New Order</label>
+        <label for="tab-menu" class="btn ghost">Back to Menu</label>
+      </div>
+    </div>
+  </div>
+</section>
     
     
 
