@@ -157,8 +157,436 @@
       </div>
     </section>
 
+    <!-- MENU PANEL -->
+    <section class="panel panel-menu" aria-labelledby="menu-title">
+      <div class="panel-inner">
+        <h2 id="menu-title">Menu</h2>
+        <p class="muted">Hover cards to flip. Use filter chips above to narrow categories. Add items to cart and view your cart at right.</p>
 
-   
+        <div class="menu-filters">
+          <label for="filter-all" class="chip active">All</label>
+          <label for="filter-pizzas" class="chip">Pizzas</label>
+          <label for="filter-sides" class="chip">Sides</label>
+          <label for="filter-desserts" class="chip">Desserts</label>
+          <label for="filter-drinks" class="chip">Drinks</label>
+        </div>
+
+        <div class="menu-area">
+          <!-- Grid -->
+          <div class="menu-grid" role="list">
+
+            <!-- Card: Margherita -->
+            <article class="menu-card pizzas" data-cat="pizzas" role="listitem" aria-label="Margherita">
+              <div class="card-scene">
+                <div class="card-face front">
+                  <div class="imgwrap"><img src="images/margharita.jpg" alt="Margherita"></div>
+                  <div class="card-meta">
+                    <h3>Margherita</h3>
+                    <p class="muted">Tomato sauce • Mozzarella • Basil</p>
+                    <!-- Removed Add/Order buttons from front -->
+                  </div>
+                </div>
+
+                <div class="card-face back" aria-hidden="true">
+                  <h4>Nutrition</h4>
+                  <ul class="nutri">
+                    <li>Calories <div class="bar"><span style="--val:65%"></span></div></li>
+                    <li>Fat <div class="bar"><span style="--val:40%"></span></div></li>
+                    <li>Protein <div class="bar"><span style="--val:28%"></span></div></li>
+                  </ul>
+                  <div class="card-actions">
+                    <label for="p-margherita" class="btn small">Add to Cart</label>
+                    <label for="tab-order" class="btn small ghost">Order Now</label>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card: Pepperoni -->
+            <article class="menu-card pizzas" data-cat="pizzas" role="listitem" aria-label="Pepperoni">
+              <div class="card-scene">
+                <div class="card-face front">
+                  <div class="imgwrap"><img src="images/pepperoni.jpg" alt="Pepperoni"></div>
+                  <div class="card-meta">
+                    <h3>Pepperoni Classic</h3>
+                    <p class="muted">Crispy pepperoni & signature sauce</p>
+                    <!-- Removed Add/Order buttons from front -->
+                  </div>
+                </div>
+
+                <div class="card-face back" aria-hidden="true">
+                  <h4>Nutrition</h4>
+                  <ul class="nutri">
+                    <li>Calories <div class="bar"><span style="--val:78%"></span></div></li>
+                    <li>Fat <div class="bar"><span style="--val:55%"></span></div></li>
+                    <li>Protein <div class="bar"><span style="--val:34%"></span></div></li>
+                  </ul>
+                  <div class="card-actions">
+                    <label for="p-pepperoni" class="btn small">Add to Cart</label>
+                    <label for="tab-order" class="btn small ghost">Order Now</label>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card: BBQ -->
+            <article class="menu-card pizzas" data-cat="pizzas">
+              <div class="card-scene">
+                <div class="card-face front">
+                  <div class="imgwrap"><img src="images/bbqchicken.jpg" alt="BBQ Chicken"></div>
+                  <div class="card-meta">
+                    <h3>BBQ Chicken</h3>
+                    <p class="muted">Smoky BBQ base & grilled chicken</p>
+                    <!-- Removed Add/Order buttons from front -->
+                  </div>
+                </div>
+
+                <div class="card-face back" aria-hidden="true">
+                  <h4>Nutrition</h4>
+                  <ul class="nutri">
+                    <li>Calories <div class="bar"><span style="--val:74%"></span></div></li>
+                    <li>Fat <div class="bar"><span style="--val:48%"></span></div></li>
+                    <li>Protein <div class="bar"><span style="--val:46%"></span></div></li>
+                  </ul>
+                  <div class="card-actions">
+                    <label for="p-bbq" class="btn small">Add to Cart</label>
+                    <label for="tab-order" class="btn small ghost">Order Now</label>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card: Veggie -->
+            <article class="menu-card pizzas" data-cat="pizzas">
+              <div class="card-scene">
+                <div class="card-face front">
+                  <div class="imgwrap"><img src="images/veggie.jpg" alt="Veggie"></div>
+                  <div class="card-meta">
+                    <h3>Veggie Supreme</h3>
+                    <p class="muted">Peppers • Onions • Mushrooms • Olives</p>
+                    <!-- Removed Add/Order buttons from front -->
+                  </div>
+                </div>
+
+                <div class="card-face back" aria-hidden="true">
+                  <h4>Nutrition</h4>
+                  <ul class="nutri">
+                    <li>Calories <div class="bar"><span style="--val:60%"></span></div></li>
+                    <li>Fat <div class="bar"><span style="--val:30%"></span></div></li>
+                    <li>Protein <div class="bar"><span style="--val:22%"></span></div></li>
+                  </ul>
+                  <div class="card-actions">
+                    <label for="p-veggie" class="btn small">Add to Cart</label>
+                    <label for="tab-order" class="btn small ghost">Order Now</label>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Additional cards: Cheese Burst, Paneer, Dominator, Sides, Desserts, Drinks -->
+            <!-- Cheese Burst -->
+            <article class="menu-card pizzas" data-cat="pizzas">
+              <div class="card-scene">
+                <div class="card-face front">
+                  <div class="imgwrap"><img src="images/cheeseburst.jpeg" alt="Cheese Burst"></div>
+                  <div class="card-meta">
+                    <h3>Cheese Burst</h3>
+                    <p class="muted">Double-layered cheese with molten center</p>
+                    <!-- Removed Add/Order buttons from front -->
+                  </div>
+                </div>
+                <div class="card-face back" aria-hidden="true">
+                  <h4>Nutrition</h4>
+                  <ul class="nutri">
+                    <li>Calories <div class="bar"><span style="--val:88%"></span></div></li>
+                    <li>Fat <div class="bar"><span style="--val:66%"></span></div></li>
+                    <li>Protein <div class="bar"><span style="--val:30%"></span></div></li>
+                  </ul>
+                  <div class="card-actions">
+                    <label for="p-cheeseburst" class="btn small">Add to Cart</label>
+                    <label for="tab-order" class="btn small ghost">Order Now</label>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Paneer -->
+            <article class="menu-card pizzas" data-cat="pizzas">
+              <div class="card-scene">
+                <div class="card-face front">
+                  <div class="imgwrap"><img src="images/Paneer.jpg" alt="Paneer"></div>
+                  <div class="card-meta">
+                    <h3>Paneer Makhani</h3>
+                    <p class="muted">Indian-style paneer and makhani sauce</p>
+                    <!-- Removed Add/Order buttons from front -->
+                  </div>
+                </div>
+                <div class="card-face back" aria-hidden="true">
+                  <h4>Nutrition</h4>
+                  <ul class="nutri">
+                    <li>Calories <div class="bar"><span style="--val:70%"></span></div></li>
+                    <li>Fat <div class="bar"><span style="--val:50%"></span></div></li>
+                    <li>Protein <div class="bar"><span style="--val:36%"></span></div></li>
+                  </ul>
+                  <div class="card-actions">
+                    <label for="p-paneer" class="btn small">Add to Cart</label>
+                    <label for="tab-order" class="btn small ghost">Order Now</label>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Dominator -->
+            <article class="menu-card pizzas" data-cat="pizzas">
+              <div class="card-scene">
+                <div class="card-face front">
+                  <div class="imgwrap"><img src="images/dominator.jpg" alt="Dominator"></div>
+                  <div class="card-meta">
+                    <h3>Chicken Dominator</h3>
+                    <p class="muted">Meat lovers' special with chicken & sausage</p>
+                    <!-- Removed Add/Order buttons from front -->
+                  </div>
+                </div>
+                <div class="card-face back" aria-hidden="true">
+                  <h4>Nutrition</h4>
+                  <ul class="nutri">
+                    <li>Calories <div class="bar"><span style="--val:92%"></span></div></li>
+                    <li>Fat <div class="bar"><span style="--val:70%"></span></div></li>
+                    <li>Protein <div class="bar"><span style="--val:48%"></span></div></li>
+                  </ul>
+                  <div class="card-actions">
+                    <label for="p-dominator" class="btn small">Add to Cart</label>
+                    <label for="tab-order" class="btn small ghost">Order Now</label>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- SIDES -->
+            <article class="menu-card sides" data-cat="sides">
+              <div class="card-scene">
+                <div class="card-face front">
+                  <div class="imgwrap"><img src="images/garlic.jpg" alt="Garlic Breadsticks"></div>
+                  <div class="card-meta">
+                    <h3>Garlic Breadsticks</h3>
+                    <p class="muted">Soft sticks brushed with garlic butter</p>
+                    <!-- Removed Add/Order buttons from front -->
+                  </div>
+                </div>
+                <div class="card-face back" aria-hidden="true">
+                  <p class="muted">Perfect with marinara dip.</p>
+                  <div class="card-actions">
+                    <label for="p-garlic" class="btn small">Add to Cart</label>
+                    <label for="tab-order" class="btn small ghost">Order Now</label>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-card sides" data-cat="sides">
+              <div class="card-scene">
+                <div class="card-face front">
+                  <div class="imgwrap"><img src="images/stuffed.jpg" alt="Stuffed Cheese Bread"></div>
+                  <div class="card-meta">
+                    <h3>Stuffed Cheese Bread</h3>
+                    <p class="muted">Bread filled with molten cheese</p>
+                    <!-- Removed Add/Order buttons from front -->
+                  </div>
+                </div>
+                <div class="card-face back" aria-hidden="true">
+                  <p class="muted">Great for sharing.</p>
+                  <div class="card-actions">
+                    <label for="p-stuffed" class="btn small">Add to Cart</label>
+                    <label for="tab-order" class="btn small ghost">Order Now</label>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-card sides" data-cat="sides">
+              <div class="card-scene">
+                <div class="card-face front">
+                  <div class="imgwrap"><img src="images/wedges.jpg" alt="Potato Wedges"></div>
+                  <div class="card-meta">
+                    <h3>Potato Wedges</h3>
+                    <p class="muted">Crispy herbed wedges with cheese</p>
+                    <!-- Removed Add/Order buttons from front -->
+                  </div>
+                </div>
+                <div class="card-face back" aria-hidden="true">
+                  <p class="muted">Seasoned to perfection.</p>
+                  <div class="card-actions">
+                    <label for="p-wedges" class="btn small">Add to Cart</label>
+                    <label for="tab-order" class="btn small ghost">Order Now</label>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- DESSERTS -->
+            <article class="menu-card desserts" data-cat="desserts">
+              <div class="card-scene">
+                <div class="card-face front">
+                  <div class="imgwrap"><img src="images/chocolava.jpg" alt="Chocolate Lava"></div>
+                  <div class="card-meta">
+                    <h3>Chocolate Lava Cake</h3>
+                    <p class="muted">Warm molten chocolate</p>
+                    <!-- Removed Add/Order buttons from front -->
+                  </div>
+                </div>
+                <div class="card-face back" aria-hidden="true">
+                  <p class="muted">Serve with ice cream.</p>
+                  <div class="card-actions">
+                    <label for="p-lava" class="btn small">Add to Cart</label>
+                    <label for="tab-order" class="btn small ghost">Order Now</label>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-card desserts" data-cat="desserts">
+              <div class="card-scene">
+                <div class="card-face front">
+                  <div class="imgwrap"><img src="images/brownie.jpg" alt="Brownie"></div>
+                  <div class="card-meta">
+                    <h3>Choco Brownie Fudge</h3>
+                    <p class="muted">Rich fudge brownie</p>
+                    <!-- Removed Add/Order buttons from front -->
+                  </div>
+                </div>
+                <div class="card-face back" aria-hidden="true">
+                  <p class="muted">Perfect end to a meal.</p>
+                  <div class="card-actions">
+                    <label for="p-brownie" class="btn small">Add to Cart</label>
+                    <label for="tab-order" class="btn small ghost">Order Now</label>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-card desserts" data-cat="desserts">
+              <div class="card-scene">
+                <div class="card-face front">
+                  <div class="imgwrap"><img src="images/cheesecake.jpg" alt="Cheesecake"></div>
+                  <div class="card-meta">
+                    <h3>Cheesecake Slice</h3>
+                    <p class="muted">Creamy and smooth</p>
+                    <!-- Removed Add/Order buttons from front -->
+                  </div>
+                </div>
+                <div class="card-face back" aria-hidden="true">
+                  <p class="muted">Pair with berries.</p>
+                  <div class="card-actions">
+                    <label for="p-cheesecake" class="btn small">Add to Cart</label>
+                    <label for="tab-order" class="btn small ghost">Order Now</label>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- DRINKS -->
+            <article class="menu-card drinks" data-cat="drinks">
+              <div class="card-scene">
+                <div class="card-face front">
+                  <div class="imgwrap"><img src="images/coke.jpg" alt="Coke"></div>
+                  <div class="card-meta">
+                    <h3>Coke (500ml)</h3>
+                    <p class="muted">Chilled classic</p>
+                    <!-- Removed Add/Order buttons from front -->
+                  </div>
+                </div>
+                <div class="card-face back" aria-hidden="true">
+                  <p class="muted">Add ice if desired.</p>
+                  <div class="card-actions">
+                    <label for="p-coke" class="btn small">Add to Cart</label>
+                    <label for="tab-order" class="btn small ghost">Order Now</label>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-card drinks" data-cat="drinks">
+              <div class="card-scene">
+                <div class="card-face front">
+                  <div class="imgwrap"><img src="images/coffee.jpg" alt="Cold Coffee"></div>
+                  <div class="card-meta">
+                    <h3>Cold Coffee Shake</h3>
+                    <p class="muted">Coffee blended with ice cream</p>
+                    <!-- Removed Add/Order buttons from front -->
+                  </div>
+                </div>
+                <div class="card-face back" aria-hidden="true">
+                  <p class="muted">Add whipped cream.</p>
+                  <div class="card-actions">
+                    <label for="p-coffee" class="btn small">Add to Cart</label>
+                    <label for="tab-order" class="btn small ghost">Order Now</label>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-card drinks" data-cat="drinks">
+              <div class="card-scene">
+                <div class="card-face front">
+                  <div class="imgwrap"><img src="images/smoothie.jpg" alt="Smoothie"></div>
+                  <div class="card-meta">
+                    <h3>Strawberry Smoothie</h3>
+                    <p class="muted">Fruit and yogurt blend</p>
+                    <!-- Removed Add/Order buttons from front -->
+                  </div>
+                </div>
+                <div class="card-face back" aria-hidden="true">
+                  <p class="muted">Refreshing and fruity.</p>
+                  <div class="card-actions">
+                    <label for="p-smoothie" class="btn small">Add to Cart</label>
+                    <label for="tab-order" class="btn small ghost">Order Now</label>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div> <!-- menu-grid -->
+
+          <!-- CART ASIDE -->
+          <aside class="cart" aria-labelledby="cart-title">
+            <h3 id="cart-title">Your Cart</h3>
+            <div class="cart-items">
+              <div class="cart-item item-margherita">Margherita <span class="qty">x1</span></div>
+              <div class="cart-item item-pepperoni">Pepperoni Classic <span class="qty">x1</span></div>
+              <div class="cart-item item-bbq">BBQ Chicken <span class="qty">x1</span></div>
+              <div class="cart-item item-veggie">Veggie Supreme <span class="qty">x1</span></div>
+              <div class="cart-item item-cheeseburst">Cheese Burst <span class="qty">x1</span></div>
+              <div class="cart-item item-paneer">Paneer Makhani <span class="qty">x1</span></div>
+              <div class="cart-item item-dominator">Chicken Dominator <span class="qty">x1</span></div>
+
+              <div class="cart-item item-garlic">Garlic Breadsticks <span class="qty">x1</span></div>
+              <div class="cart-item item-stuffed">Stuffed Cheese Bread <span class="qty">x1</span></div>
+              <div class="cart-item item-wedges">Potato Wedges <span class="qty">x1</span></div>
+
+              <div class="cart-item item-lava">Chocolate Lava Cake <span class="qty">x1</span></div>
+              <div class="cart-item item-brownie">Choco Brownie Fudge <span class="qty">x1</span></div>
+              <div class="cart-item item-cheesecake">Cheesecake Slice <span class="qty">x1</span></div>
+
+              <div class="cart-item item-coke">Coke (500ml) <span class="qty">x1</span></div>
+              <div class="cart-item item-coffee">Cold Coffee Shake <span class="qty">x1</span></div>
+              <div class="cart-item item-smoothie">Strawberry Smoothie <span class="qty">x1</span></div>
+            </div>
+
+            <div class="cart-actions">
+              <label for="order-confirm" class="btn primary place-order">Place Order</label>
+              <label for="tab-order" class="btn ghost">Go to Order</label>
+            </div>
+
+            <div class="cart-empty muted">No items selected. Add items from menu or home.</div>
+          </aside>
+        </div> <!-- menu-area -->
+      </div>
+    </section>
+
+    
+    
+    
+
   </main>
 
   <!-- FOOTER -->
